@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitFuel Sports</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    background-color: #447794;
+    font-family: Arial, sans-serif;
+    color: #F5F5F5;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #2D5B75;
+    padding: 15px 25px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #F5F5F5;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu-items a {
+    color: #F5F5F5;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.menu-items a:hover {
+    text-decoration: none;
+    color: #102040;
+}
+
+@media(max-width: 767px) {
+    #menu-links {
+        display: none; 
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        background-color: #2D5B75;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+.right-section img {
+    width: 250px;
+    height: auto;
+    position: relative;
+    top: -20px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: transparent; 
+}
+
+
+.contact-panel {
+  width: 90%;
+  max-width: 720px;            
+  background: rgba(45,91,117,0.95); 
+  padding: 34px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16,32,64,0.35);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.contact-panel h1 {
+  margin: 0 0 26px 0;
+  color: #F5F5F5;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+.contact-form {
+  width: 100%;
+  display: block;
+  text-align: left; 
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 6px 0;
+  color: #F5F5F5;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  border-radius: 10px;
+  background: #F5F5F5;   
+  color: #102040;     
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+
+.submit-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  background-color: #102040; 
+  color: #F5F5F5;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.submit-btn:hover {
+  background-color: #0a182f;
+}
+
+.contact-form input:invalid,
+.contact-form select:invalid,
+.contact-form textarea:invalid {
+  outline: 2px solid rgba(255,0,0,0.18);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(16,32,64,0.35);
+}
+
+@media (max-width: 520px) {
+  .contact-panel { padding: 22px; border-radius: 12px; }
+  .contact-panel h1 { font-size: 22px; }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"],
+  .contact-form select,
+  .contact-form textarea { padding: 12px; font-size: 15px; }
+  .submit-btn { padding: 12px; font-size: 16px; }
+}
+footer {
+    background-color: #2D5B75; 
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    width: 250px;
+    height: auto;
+    position: relative;
+    top: -20px;
+}
+
+.footer-right a {
+    margin-left: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+html{
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
+    <body>
+<header>
+  <div class="left-section">
+    <div class="menu">
+        <div class="menu-lines" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu-items" id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About us</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+            <a href="contactus.html">Contact us</a>
+        </div>
+    </div>
+</div>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menuLinks = document.getElementById('menu-links');
+
+    hamburger.addEventListener('click', () => {
+        if(menuLinks.style.display === "flex") {
+            menuLinks.style.display = "none";
+        } else {
+            menuLinks.style.display = "flex";
+        }
+    });
+</script>
+<div class="right-section">
+    <a href="index.html">
+        <img src="..\images\logo\fitfuel project.png" alt="FitFuel Logo">
+    </a>
+</div>
+</header>
+<section class="contact-section">
+  <div class="contact-panel">
+    <h1>How can we assist you?</h1>
+
+    <form id="contact-form" class="contact-form" method="post">
+      <label for="first">First Name:</label>
+      <input id="first" name="first" type="text" placeholder="Write your first name" required>
+
+      <label for="last">Last Name:</label>
+      <input id="last" name="last" type="text" placeholder="Write your last name" required>
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+      <label for="phone">Phone Number:</label>
+     <input id="phone" name="phone" type="tel"
+       placeholder="+961 12 345 678"
+       pattern="^\+961\s?\d{2}\s?\d{3}\s?\d{3}$"
+       title="Format must be: +961 12 345 678"
+       required>
+
+      <label for="issue">Issue Type:</label>
+      <select id="issue" name="issue" required>
+        <option value="">-- Select issue --</option>
+        <option value="order">Order Issue</option>
+        <option value="product">Product Question</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="desc">Description:</label>
+      <textarea id="desc" name="desc" placeholder="Describe your issue..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="..\images\logo\fitfuel project.png" alt="FitFuel Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <a href="#contactus.html" target="_blank"><img src="..\images\icons\instagram-icon.png" alt="Instagram" class="social-icon"></a>
+            <a href="#contactus.html" target="_blank"><img src="..\images\icons\x-icon.webp" alt="X" class="social-icon"></a>
+            <a href="#contactus.html" target="_blank"><img src="..\images\icons\facebook-icon.png" alt="Facebook" class="social-icon"></a>
+        </div>
+    </div>
+</footer>
+</body>

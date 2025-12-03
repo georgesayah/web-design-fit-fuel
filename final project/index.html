@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitFuel Sports</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    background-color: #447794;
+    font-family: Arial, sans-serif;
+    color: #F5F5F5;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #2D5B75;
+    padding: 15px 25px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #F5F5F5;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu-items a {
+    color: #F5F5F5;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.menu-items a:hover {
+    text-decoration: none;
+    color: #102040;
+}
+@media(max-width: 767px) {
+    #menu-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        background-color: #2D5B75;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+.right-section img {
+    width: 250px;
+    height: auto;
+    position: relative;
+    top: -20px;
+}
+.home-swiper-container {
+    width: 100%;
+    max-width: 900px;     
+    margin: 30px auto 0;  
+}
+
+.swiper {
+    width: 100%;
+    height: 350px;        
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 350px;        
+    object-fit: cover;
+}
+
+
+
+.home-swiper-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #447794;
+    background: rgba(255,255,255,0.8);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #447794;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.swiper-pagination-bullet {
+    background: #447794;
+}
+.swiper-pagination-bullet-active {
+    background: #2D5B75;
+}
+
+
+@media (max-width: 768px) {
+    .swiper {
+        height: 220px;
+    }
+    .swiper-slide img {
+        height: 220px;
+    }
+    .home-swiper-container {
+        max-width: 95%;
+        margin-top: 20px;
+    }
+}
+
+.slogan-section {
+    background-image: url('https://wallpapers.com/images/featured/best-sports-background-9mo6eiyv8hxj5jln.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #F5F5F5;
+    margin-top: 40px;
+}
+
+.slogan-content h1 {
+    font-size: 28px;
+    font-weight: bold;
+    background-color: rgba(16, 32, 64, 0.6);
+    padding: 15px 25px;
+    border-radius: 8px;
+}
+
+.about-btn {
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #2D5B75;
+    color: #F5F5F5;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.about-btn:hover {
+    background-color: #102040;
+}
+.new-arrivals {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.new-arrivals h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.new-slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.new-slides {
+    display: flex;
+    width: 600%;
+    transition: transform 0.5s ease;
+}
+
+.new-slide {
+    width: 16.6666%;
+    flex-shrink: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    justify-content: center;
+}
+
+.new-slide img {
+    width: 40%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.info {
+    margin-top: 10px;
+    padding: 12px;
+    width:40%;
+    background-color: #102040;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+.new-slider input {
+    display: none;
+}
+#nslide1:checked ~ .new-slides { transform: translateX(0%); }
+#nslide2:checked ~ .new-slides { transform: translateX(-16.6666%); }
+#nslide3:checked ~ .new-slides { transform: translateX(-33.3333%); }
+#nslide4:checked ~ .new-slides { transform: translateX(-50%); }
+#nslide5:checked ~ .new-slides { transform: translateX(-66.6666%); }
+#nslide6:checked ~ .new-slides { transform: translateX(-83.3333%); }
+.new-slider .nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.new-slider .nav label {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#nslide1:checked ~ .nav label[for="nslide1"],
+#nslide2:checked ~ .nav label[for="nslide2"],
+#nslide3:checked ~ .nav label[for="nslide3"],
+#nslide4:checked ~ .nav label[for="nslide4"],
+#nslide5:checked ~ .nav label[for="nslide5"],
+#nslide6:checked ~ .nav label[for="nslide6"] {
+    background: #333;
+}
+@media (max-width: 900px) {
+    .new-slide { width: 100%; }
+    .new-slides { width: 600%; }
+}
+#our-products {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#our-products h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #F5F5F5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.product-box {
+    position: relative;
+    width: 80%;
+    height: 250px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.product-box:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.product-box .overlay {
+    background-color: rgba(16, 32, 64, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #F5F5F5; 
+}
+
+.product-box h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #F5F5F5;
+}
+
+.product-box p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #F5F5F5;
+}
+.shop-btn {
+    text-decoration: none;
+    background-color: #2D5B75;
+    color: #F5F5F5;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #102040;
+}
+#sports-box {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYi1pMlXMky06SgNriDVVs9e9gPfw6fvPhsLg2jW7zNODxGGd1VJ5GJ-pMEXg9wsPyir4&usqp=CAU"); 
+}
+
+#shoes-box {
+    background-image: url("https://www.gearpatrol.com/wp-content/uploads/sites/2/2024/06/nike-pegasus-41-gear-patrol-lead-jpg.webp"); 
+}
+
+#accessories-box {
+    background-image: url("https://image.slidesdocs.com/responsive-images/background/achieve-your-fitness-goals-with-3d-gym-essentials-workout-accessories-bodybuilding-gear-sports-bag-protein-powder-and-mixing-bottle-powerpoint-background_67a9bd190f__960_540.jpg"); 
+}
+footer {
+    background-color: #2D5B75;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    width: 250px;
+    height: auto;
+    position: relative;
+    top: -20px;
+}
+
+.footer-right a {
+    margin-left: 15px;
+}
+
+.social-icon {
+    width: 30px; 
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+html{
+    scroll-behavior: smooth;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 55px;
+    font-weight: bold;
+    color: #f5f5f5;
+    background: transparent !important;
+    padding: 0;
+    z-index: 20;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow.left {
+    left: 2%;
+}
+
+.arrow.right {
+    right: 2%;
+}
+
+.arrow:hover {
+    background: transparent !important;
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="left-section">
+    <div class="menu">
+        <div class="menu-lines" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu-items" id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About us</a>
+            <a href="#new-arrivals">New Arrivals</a>
+            <a href="contactus.html">Contact us</a>
+        </div>
+    </div>
+</div>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menuLinks = document.getElementById('menu-links');
+
+    hamburger.addEventListener('click', () => {
+        if(menuLinks.style.display === "flex") {
+            menuLinks.style.display = "none";
+        } else {
+            menuLinks.style.display = "flex";
+        }
+    });
+</script>
+<div class="right-section">
+    <a href="index.html">
+        <img src="..\images\logo\fitfuel project.png" alt="FitFuel Logo">
+    </a>
+</div>
+</header>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section class="home-swiper-container">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="..\images\slider\basketball jerseys.webp" alt=""></div>
+            <div class="swiper-slide"><img src="..\images\slider\basketball shoes shel.webp" alt=""></div>
+            <div class="swiper-slide"><img src="..\images\slider\football jerseys.avif" alt=""></div>
+            <div class="swiper-slide"><img src="..\images\slider\football shell.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="..\images\slider\gym wear.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="..\images\slider\running shoes.jpg" alt=""></div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper('.swiper', {
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    loop: true,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    slidesPerView: 1
+});
+</script>
+<section class="slogan-section">
+    <div class="slogan-content">
+        <h1>Fuel Your Passion. Play Hard. Look Fit.</h1>
+        <a href="aboutus.html" class="about-btn">About Us</a>
+    </div>
+</section>
+<section class="new-arrivals" id="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="new-slider">
+        <div class="arrow left" id="leftArrow">&#10094; </div>
+        <div class="arrow right" id="rightArrow"> &#10095; </div>
+
+        <input type="radio" name="new-slide" id="nslide1" checked>
+        <input type="radio" name="new-slide" id="nslide2">
+        <input type="radio" name="new-slide" id="nslide3">
+        <input type="radio" name="new-slide" id="nslide4">
+        <input type="radio" name="new-slide" id="nslide5">
+        <input type="radio" name="new-slide" id="nslide6">
+        <div class="new-slides">
+
+            <div class="new-slide">
+                <img src="..\images\ru\NIKE PEGASUS TRAIL 2 WATERMELON.webp" alt="Product 1">
+                <div class="info"><p>Nike Pegasus Trail 2 Watermelon</p><p>$115</p></div>
+            </div>
+            <div class="new-slide">
+                <img src="..\images\football\football-shoes\football-shoes adidas X Crazyfast messi blue.webp" alt="Product 2">
+                <div class="info"><p>adidas X Crazyfast messi blue</p><p>$99</p></div>
+            </div>
+            <div class="new-slide">
+                <img src="..\images\basketball\basketball-shoes\ADIDAS RG3 ENERGY BOOST BLUE.jpg" alt="Product 3">
+                <div class="info"><p>adidas RG3 Energy BOOST blue</p><p>$95</p></div>
+            </div>
+            <div class="new-slide">
+                <img src="..\images\gym\gym-fits\LONG-SLEEVE DRI-FIT SHIRT BLUE.jpg" alt="Product 4">
+                <div class="info"><p>long sleeve DRI-FIT shirt blue</p><p>$35</p></div>
+            </div>
+            <div class="new-slide">
+                <img src="..\images\basketball\basketball-fits\LEBANON NATIONAL TEAM JERSEY.webp" alt="Product 5">
+                <div class="info"><p>Lebanese National team jersey</p><p>$30</p></div>
+            </div>
+            <div class="new-slide">
+                <img src="..\images\football\football-jerseys\RONALDO CLUB SPECIAL JERSEY.webp" alt="Product 6">
+                <div class="info"><p>Ronaldo club special jersey</p><p>$75</p></div>
+            </div>
+        </div>
+        <div class="nav">
+            <label for="nslide1"></label>
+            <label for="nslide2"></label>
+            <label for="nslide3"></label>
+            <label for="nslide4"></label>
+            <label for="nslide5"></label>
+            <label for="nslide6"></label>
+        </div>
+    </div>
+</section>
+<section id="our-products">
+    <h2>Our Products</h2>
+
+    <div class="product-box" id="sports-box">
+        <div class="overlay">
+            <h3>SPORTS</h3>
+            <p>Here you'll find everything related to basketball,football and gym.</p>
+            <a href="sports.html" class="shop-btn">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="product-box" id="shoes-box">
+        <div class="overlay">
+            <h3>SHOES</h3>
+            <p>Here you'll find basketball, football, and gym shoes.</p>
+            <a href="shoes.html" class="shop-btn">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="product-box" id="accessories-box">
+        <div class="overlay">
+            <h3>ACCESSORIES</h3>
+            <p>Here you’ll find basketball, football, and gym accessories.</p>
+            <a href="accessories.html" class="shop-btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="..\images\logo\fitfuel project.png" alt="FitFuel Logo" class="footer-logo">
+        </div>
+        <div class="footer-right">
+            <a href="#index.html" target="_blank"><img src="..\images\icons\instagram-icon.png" alt="Instagram" class="social-icon"></a>
+            <a href="#index.html" target="_blank"><img src="..\images\icons\x-icon.webp" alt="X" class="social-icon"></a>
+            <a href="#index.html" target="_blank"><img src="..\images\icons\facebook-icon.png" alt="Facebook" class="social-icon"></a>
+        </div>
+    </div>
+</footer>
+<script>
+    const slides = ["nslide1","nslide2","nslide3","nslide4","nslide5","nslide6"];
+    let current = 0;
+
+    function updateSlide() {
+        document.getElementById(slides[current]).checked = true;
+    }
+
+    document.getElementById("leftArrow").onclick = function() {
+        current = (current - 1 + slides.length) % slides.length;
+        updateSlide();
+    };
+
+    document.getElementById("rightArrow").onclick = function() {
+        current = (current + 1) % slides.length;
+        updateSlide();
+    };
+</script>
+</body>
+</html>
